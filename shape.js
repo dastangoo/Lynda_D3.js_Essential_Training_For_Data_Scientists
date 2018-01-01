@@ -4,4 +4,5 @@ var dataArray = [5, 11, 18];
 // $("body").append("<svg></svg>");
 
 // With d3.js, you can manipulate DOM
-d3.select("body").append("svg").attr("height", "100%").attr("width", "100%");
+var svg = d3.select("body").append("svg").attr("height", "100%").attr("width", "100%");
+svg.selectAll("rect").data(dataArray).enter().append("rect");
