@@ -34,3 +34,18 @@ svg.selectAll("ellipse").data(dataArray).enter().append("ellipse")
         return d * 3; })
       .attr('ry', '30');
         
+var newX = 900;
+svg.selectAll("line").data(dataArray).enter().append("line")
+      .attr('x1', newX)
+      // .style('stroke', 'green')
+      // .attr('stroke', 'blue')
+      // .attr('stroke-width', '2')
+      .attr('y1', function (d, i) {
+        return 80 + (i * 20);
+      })
+      .attr('x2', function (d) {
+        return newX + (d * 15);
+      })
+      .attr('y2', function (d, i) {
+        return 80 + (i * 20);
+      });
